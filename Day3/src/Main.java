@@ -199,6 +199,13 @@ public class Main {
                     int numero1 = sc.nextInt();
                     System.out.println("Escribe el segundo numero para averiguar su mcd");
                     int numero2 = sc.nextInt();
+                    
+                    while(numero2 != 0){
+                        int numero3 = numero2;
+                        numero2 = numero1 % numero2;
+                        numero1 = numero3;
+                    }
+                    System.out.println("El mcd de esos numeros sera: " + numero1);
 
                 }
                 case "19" ->{
@@ -395,7 +402,10 @@ public class Main {
                     System.out.println("El numero hexadecimal es: "+ Hexadecimal);
                 }
                 case "36" ->{
-                    System.out.println("Escribe un programa para encontrar el complemento a 1 de un número en Java.");
+                   System.out.println("Elige el numero al que se le hara el complemento a 1");
+                    int numero = sc.nextInt();
+                    
+                    System.out.println("El complemento a 1 del numero: "+ numero + " es: "+ ~numero);
                 }
                 case "37" ->{
                     System.out.println("Escribe un programa para encontrar el complemento a 2 de un número binario en Java.");
@@ -433,9 +443,100 @@ public class Main {
                         }
                     }
                 }
+                case "40" ->{
+                        for (int k = 1; k <10000 ; k++){
+                            int suma = 0;
+
+                            for(int i = 1; i < k; i++){
+                                if(k % i == 0){
+                                    suma+=i;
+                                }
+                            }
+                            if(k == suma){
+                                System.out.println("Es un numero perfecto" + k);
+                             }
+                          }
+                }
+                case "41" ->{
+                    System.out.println("Ingrese el numero que desea saber si es perfecto");
+                    int k = sc.nextInt();
+                    int suma = 0;
+
+                            for(int i = 1; i < k; i++){
+                                if(k % i == 0){
+                                    suma+=i;
+                                }
+                            }
+                            if(k == suma){
+                                System.out.println("Es un numero perfecto " + k);
+                             }
+                            else{
+                                System.out.println("No es un numero perfecto " + k);
+                            }
+                }
+                case "42" ->{
+                    for(int k = 1; k < 1000 ; k++){
+                        String armstrong = String.valueOf(k);
+                        int save = 0;
+                    
+                    
+                    for(int i = 0; i < armstrong.length(); i++){
+                        int numero = Character.getNumericValue(armstrong.charAt(i));
+                        int factorial =1;
+                        
+                        for (int j = 1; j <= armstrong.length() ; j++) {
+                        factorial *= numero;
+                        }
+                        save+=factorial;
+                    }
+                    
+                    if (save == Integer.parseInt(armstrong)) {
+                            System.out.println("El numero "+ save+ " es un armstrong");
+                        }
+                    }
+                }
+                case "43" ->{
+                    System.out.println("Ingrese el numero que desea saber si es armstrong");
+                    String armstrong = sc.nextLine();
+                    
+                    int save = 0;
+                    
+                    
+                    for(int i = 0; i < armstrong.length(); i++){
+                        int numero = Character.getNumericValue(armstrong.charAt(i));
+                        int factorial =1;
+                        
+                        for (int j = 1; j <= armstrong.length() ; j++) {
+                        factorial *= numero;
+                        }
+                        save+=factorial;
+                    }
+                    
+                    if (save == Integer.parseInt(armstrong)) {
+                            System.out.println("El numero "+ save+ " es un armstrong");
+                        }
+                    else{
+                        System.out.println("El numero no es un armstrong");
+                    }
+                    
+                }
+                case "44" ->{
+                    System.out.println("Ingrese un numero para sacar sus factores primos");
+                    int numero = sc.nextInt();
+                    
+                    int num = 2;
+
+                    while(numero!=1) {
+                         while(numero%num==0) {
+                              System.out.println(num);
+                              numero /= num;
+                         }
+                    }
+                }
                    
             }
 
         }
     }
+    
 }
