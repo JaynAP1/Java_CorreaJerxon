@@ -106,9 +106,7 @@ public class Main {
                             System.out.println(suma);
 
                             numero1 = i;
-
                             suma += numero1;
-
                         }
                     }
                 }
@@ -204,8 +202,238 @@ public class Main {
 
                 }
                 case "19" ->{
+                    System.out.println("Escribe la cantidad de numeros que vas a ingresar");
+                    int cantidad= sc.nextInt();
+                    ArrayList<Integer> numeros = new ArrayList<>();
+                    
+                    int contador1 = 0;
+                    int contador2 = 0;
+                    int contador3 = 0;
+                    
+                    for(int i = 0; i < cantidad; i++){
+                        numeros.add(sc.nextInt());
+                    }
+                    
+                    for(int i = 0; i < numeros.size();i++){
+                        System.out.println(numeros.get(i));
+                        if(numeros.get(i) >0){
+                            contador1++;
+                        }
+                        else if(numeros.get(i) < 0){
+                            contador2++;
+                        }
+                        else{
+                            contador3++;
+                        }
+                    }
+                    System.out.println("El total de ceros es de: " +contador3+ " y el total de numeros positivos es de: "+ contador1 + " y el total de negativos es de:  " + contador2);
                     
                 }
+                case "20" ->{
+                    System.out.println("Escribe la cantidad de numeros que vas a ingresar");
+                    int cantidad= sc.nextInt();
+                    ArrayList<Integer> numeros = new ArrayList<>();
+                    
+                    int contador1 = 0;
+                    int contador2 = 0;
+                    int contador3 = 0;
+                    
+                    for(int i = 0; i < cantidad; i++){
+                        numeros.add(sc.nextInt());
+                    }
+                    
+                    Collections.sort(numeros);
+                    
+                    System.out.println("El primer numero es: " + numeros.get(0) + " el utlimo numero es: " + numeros.get(numeros.size()-1));
+                    
+                }
+                case "21" ->{
+                    
+                    int suma = 0;
+                    
+                    for (int i = 100; i < 201; i++){
+                        if (i % 9 == 0){
+                            System.out.println("Numero divisible por 9: "+i);
+                            suma += i;
+                        }
+                        System.out.println("Suma total: "+ suma);
+                    }
+                }
+                case "22" ->{
+                    System.out.println("Escribe el numero binario que deseas convertir");
+                    String NumeroBinario = sc.nextLine();
+                    
+                    int Decimal = Integer.parseInt(NumeroBinario,2);
+                    
+                    System.out.println("El numero decimal es: " + Decimal);
+                }
+                case "23" ->{
+                    System.out.println("Escribe el numero que desea saber si es fuerte");
+                    String NumeroFuerte = sc.nextLine();
+                    int save = 0;
+                    
+                    
+                    for(int i = 0; i < NumeroFuerte.length(); i++){
+                        int numero = Character.getNumericValue(NumeroFuerte.charAt(i));
+                        int factorial =1;
+                        
+                        for (int j = 1; j <= numero ; j++) {
+                        factorial *= j;
+                        }
+                        save+=factorial;
+                        
+                    }
+                    if (save == Integer.parseInt(NumeroFuerte)) {
+                            System.out.println("El numero "+ save+ " es fuerte");
+                        }
+                    else{
+                        System.out.println("El numero no es fuerte");
+                    }
+                   
+                }
+                case "24" ->{
+                    System.out.println("Escribe el numero hexadecimal");
+                    String Hexadecimal = sc.nextLine();
+                    
+                    int Decimal = Integer.parseInt(Hexadecimal, 16);
+                    
+                    System.out.println(Decimal);
+                }
+                case "25" ->{
+                    System.out.println("Escribe el numero hexadecimal");
+                    String Hexadecimal = sc.nextLine();
+                    
+                    String octal = Integer.toOctalString(Integer.parseInt(Hexadecimal, 16));
+                    
+                    System.out.println(octal);
+                }
+                case "26" ->{
+                     System.out.println("Escribe el numero hexadecimal");
+                    String Hexadecimal = sc.nextLine();
+                    
+                    String Binario = Integer.toBinaryString(Integer.parseInt(Hexadecimal, 16));
+                    
+                    System.out.println(Binario);
+                }
+                case "27" ->{
+                    System.out.println("Escribe el numero decimal");
+                    int Decimal = sc.nextInt();
+                    
+                    String Hexadecimal = Integer.toHexString(Decimal).toUpperCase();
+                    
+                    System.out.println(Hexadecimal);
+                }
+                case "28" ->{
+                    System.out.println("Escribe el numero decimal");
+                    int Decimal = sc.nextInt();
+                    
+                    String Octal = Integer.toOctalString(Decimal);
+                    System.out.println("El numero octal es: " + Octal);
+                }
+                case "29" ->{
+                    System.out.println("Escribe el numero decimal");
+                    int Decimal = sc.nextInt();
+                    
+                    String Binario = Integer.toBinaryString(Decimal);
+                    System.out.println("El numero binario es: "+ Binario);
+                }
+                case "30" ->{
+                    System.out.println("Escribe el numero binario");
+                    String Binario = sc.nextLine();
+                    
+                    int Decimal = Integer.parseInt(Binario, 2);
+                    
+                    String Octal = Integer.toOctalString(Decimal);
+                    
+                    System.out.println("El numero octal es: "+ Octal);
+                   
+                }
+                case "31" ->{
+                    System.out.println("Escribe el numero binario");
+                    String Binario = sc.nextLine();
+                    
+                    int Decimal = Integer.parseInt(Binario, 2);
+                    
+                    System.out.println("El numero decimal es: " + Decimal);
+                }
+                case "32" ->{
+                    System.out.println("Escribe el numero binario");
+                    String Binario = sc.nextLine();
+                    
+                    int Decimal = Integer.parseInt(Binario, 2);
+                    
+                    String Hexadecimal = Integer.toHexString(Decimal).toUpperCase();
+                    
+                    System.out.println("El numero hexadecimal es: "+ Hexadecimal);
+                }
+                case "33" ->{
+                    System.out.println("Escribe el numero octal");
+                    String Octal = sc.nextLine();
+                    
+                    int Decimal = Integer.parseInt(Octal, 8);
+                    
+                    String Binario = Integer.toBinaryString(Decimal);
+                    
+                    System.out.println("El numero binario es " + Binario);
+                }
+                case "34" ->{
+                    System.out.println("Escribe el numero octal");
+                    String Octal = sc.nextLine();
+                    
+                    int Decimal = Integer.parseInt(Octal, 8);
+                    
+                    System.out.println("El numero decimal es: " + Decimal);
+                }
+                case "35" ->{
+                    System.out.println("Escribe el numero octal");
+                    String Octal = sc.nextLine();
+                    
+                    int Decimal = Integer.parseInt(Octal, 8);
+                    
+                    String Hexadecimal = Integer.toHexString(Decimal);
+                    
+                    System.out.println("El numero hexadecimal es: "+ Hexadecimal);
+                }
+                case "36" ->{
+                    System.out.println("Escribe un programa para encontrar el complemento a 1 de un número en Java.");
+                }
+                case "37" ->{
+                    System.out.println("Escribe un programa para encontrar el complemento a 2 de un número binario en Java.");
+                }
+                case "38" ->{
+                    System.out.println("Elige el numero al que llegara la serie de fibonacci.");
+                    int numero = sc.nextInt();
+                    int numero1 = 0,  numero2 = 1, suma = 1;
+
+                    for (int i = 1; i < numero; i++) {
+                        System.out.println(suma);
+                        suma = numero1 + numero2;
+                        numero1 = numero2;
+                        numero2 = suma;
+                    }
+                }
+                case "39" ->{
+                    for(int k = 1; k < 100000; k++  ){
+                        String NumeroFuerte = String.valueOf(k);
+                        int save = 0;
+                    
+                    
+                    for(int i = 0; i < NumeroFuerte.length(); i++){
+                        int numero = Character.getNumericValue(NumeroFuerte.charAt(i));
+                        int factorial =1;
+                        
+                        for (int j = 1; j <= numero ; j++) {
+                        factorial *= j;
+                        }
+                        save+=factorial;
+                        
+                    }
+                    if (save == Integer.parseInt(NumeroFuerte)) {
+                            System.out.println("El numero "+ save+ " es fuerte");
+                        }
+                    }
+                }
+                   
             }
 
         }
