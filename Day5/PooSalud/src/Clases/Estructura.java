@@ -1,7 +1,7 @@
 package Clases;
 
-public class Persona {
+public class Estructura {
     int id;
     String nombre;
+    int Capacidad;
 }
-
