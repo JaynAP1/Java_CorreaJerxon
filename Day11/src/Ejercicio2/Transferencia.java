@@ -1,4 +1,5 @@
 package Ejercicio2;
+
 public class Transferencia {
 	
 	private int importe;

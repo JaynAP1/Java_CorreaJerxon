@@ -1,4 +1,5 @@
 package Ejercicio2;
+
 public class Mail {
 	
 	private String auditor;
