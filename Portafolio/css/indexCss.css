@@ -1,8 +1,14 @@
+@font-face {
+    font-family: "Minecraft";
+    src: url("/fonts/Minecraft.ttf");
+}
+
 *{
+    font-family: "Minecraft";
     margin: 0;
-    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 .Cuerpo{
+    overflow-x: hidden;
     width: 100vw;
     height: 100vh;
     background-repeat: no-repeat;
@@ -12,15 +18,38 @@
 .TopBar{
     background-color: black;
     height: 3.5em;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 .ContentBar{
-    color: white;
     display: flex;
     justify-content: center;
     gap: 2em;
-    align-items: center;
-    padding-top: 0.6em;
 }
 .ContentBar p{
     font-size: 20px;
+    cursor: pointer;
+}
+.rightBar{
+    display: flex;
+    justify-content: space-evenly;
+    padding-left: 2em;
+    gap: 2em;
+}
+.rightBar i{
+    scale: 1.5;
+}
+.MidCuerpo{
+    color: white;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.MidContent{
+    text-align: center;
+    font-size: 50px;
 }
