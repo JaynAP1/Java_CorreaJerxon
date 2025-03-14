@@ -49,7 +49,7 @@ public class Persona {
     }
 
     public static void main(String[] args) throws IOException {
-        BufferedReader lector = new BufferedReader(new FileReader("./src/ArchivoObjeto/data.txt"));
+        BufferedReader lector = new BufferedReader(new FileReader("C:\\Users\\Uniminuto Tibu\\Documents\\Correa\\Java_CorreaJerxon\\Dia19\\Persistencia\\src\\ArchivoObjeto\\data.txt"));
         Persona persona1 = new Persona();
 
         persona1=fromString(lector.readLine());
