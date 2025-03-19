@@ -37,6 +37,7 @@ public class Home extends javax.swing.JFrame {
         jButton5 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
 
         jPasswordField1.setText("jPasswordField1");
 
@@ -58,14 +59,14 @@ public class Home extends javax.swing.JFrame {
         jButton1.setBackground(new java.awt.Color(96, 195, 250));
         jButton1.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Actualizar Usuarios");
+        jButton1.setText("Ver todos");
         jButton1.setBorder(null);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        Background.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 270, 237, 47));
+        Background.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 330, 237, 47));
 
         jButton5.setBackground(new java.awt.Color(96, 195, 250));
         jButton5.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
@@ -104,6 +105,18 @@ public class Home extends javax.swing.JFrame {
         });
         Background.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 210, 237, 47));
 
+        jButton2.setBackground(new java.awt.Color(96, 195, 250));
+        jButton2.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
+        jButton2.setText("Actualizar Usuarios");
+        jButton2.setBorder(null);
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        Background.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 270, 237, 47));
+
         getContentPane().add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 520, 420));
 
         pack();
@@ -112,7 +125,7 @@ public class Home extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ActualizarUsuario().setVisible(true);
+                new ListarUsuario().setVisible(true);
             }
         });
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -140,6 +153,14 @@ public class Home extends javax.swing.JFrame {
             }
         });
     }//GEN-LAST:event_jButton7ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new ActualizarUsuario().setVisible(true);
+            }
+        });
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -179,6 +200,7 @@ public class Home extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Background;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;

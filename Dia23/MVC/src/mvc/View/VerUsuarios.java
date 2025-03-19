@@ -30,6 +30,7 @@ public class VerUsuarios extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel2 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jButton7 = new javax.swing.JButton();
@@ -39,6 +40,9 @@ public class VerUsuarios extends javax.swing.JFrame {
         PrintName = new javax.swing.JLabel();
         PrintEmail = new javax.swing.JLabel();
         jButton8 = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
+
+        jLabel2.setText("jLabel2");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -46,10 +50,10 @@ public class VerUsuarios extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(14, 20, 27));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("SansSerif", 1, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Ver usuarios");
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 10, -1, -1));
+        jLabel1.setText("ID");
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 59, -1, 30));
 
         jButton7.setBackground(new java.awt.Color(96, 195, 250));
         jButton7.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
@@ -63,10 +67,8 @@ public class VerUsuarios extends javax.swing.JFrame {
         });
         jPanel2.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 270, 160, 47));
 
-        SearchID.setBackground(new java.awt.Color(255, 255, 255));
         SearchID.setBorder(null);
-        SearchID.setForeground(new java.awt.Color(0, 0, 0));
-        SearchID.setText(" Buscar id");
+        SearchID.setToolTipText("");
         SearchID.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
         SearchID.setMargin(new java.awt.Insets(10, 6, 2, 6));
         SearchID.addActionListener(new java.awt.event.ActionListener() {
@@ -123,6 +125,11 @@ public class VerUsuarios extends javax.swing.JFrame {
         });
         jPanel2.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 340, 160, 47));
 
+        jLabel3.setFont(new java.awt.Font("SansSerif", 1, 24)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("Ver usuarios");
+        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 10, -1, -1));
+
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -1, 520, 420));
 
         pack();
@@ -136,9 +143,9 @@ public class VerUsuarios extends javax.swing.JFrame {
         Usuario usuarioencontrado = conexion.buscarUsuario(busqueda);
         
         if(usuarioencontrado != null){
-            PrintID.setText(String.valueOf(usuarioencontrado.id));
-            PrintName.setText(usuarioencontrado.nombre);
-            PrintEmail.setText(usuarioencontrado.email);
+            PrintID.setText("iD: "+ String.valueOf(usuarioencontrado.id));
+            PrintName.setText("Nombre: "+ usuarioencontrado.nombre);
+            PrintEmail.setText("Email: "+ usuarioencontrado.email);
         }
         else{
             JOptionPane.showMessageDialog(null, "Usuario no encontrado");
@@ -197,6 +204,8 @@ public class VerUsuarios extends javax.swing.JFrame {
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables

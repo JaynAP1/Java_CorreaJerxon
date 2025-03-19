@@ -7,6 +7,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
+import java.util.*;
 import mvc.Controller.Usuario;
 
 
@@ -79,6 +80,25 @@ public class Conexion {
         catch (SQLException e){
             e.printStackTrace();
         }
+    }
+    public static List<String> obtenerUsuarios(){
+        String sql = "select * from usuarios";
+        List<String> listaUsuarios = new ArrayList<>();
+        try{
+            Connection conexionInterna = conectar();
+            PreparedStatement solicitud = conexionInterna.prepareStatement(sql);
+
+            ResultSet resultado = solicitud.executeQuery();
+            while (resultado.next()){
+                listaUsuarios.add(resultado.getInt("id")+
+                        " - "+resultado.getString("nombre")+" - "+
+                        resultado.getString("email"));
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return listaUsuarios;
     }
     
 }
